@@ -1,19 +1,28 @@
 {
   "name": "mev-share-experiment",
   "version": "1.0.0",
-  "description": "",
+  "description": "MEV-Share backrun bot with Aave flashloan execution",
   "main": "index.js",
   "scripts": {
     "dev": "ts-node -r tsconfig-paths/register ./src/index.ts",
-    "debug": "ts-node -r tsconfig-paths/register"
+    "debug": "ts-node -r tsconfig-paths/register",
+    "build": "tsc",
+    "start": "node dist/src/index.js"
   },
-  "keywords": [],
+  "keywords": [
+    "mev",
+    "flashbot",
+    "backrun",
+    "arbitrage",
+    "aave"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "axios": "^1.4.0",
     "core-js": "^3.26.1",
     "dotenv": "^16.0.3",
+    "ethers": "^6.7.1",
     "eventsource": "^2.0.2",
     "ts-node": "^10.9.1",
     "ts-node-dev": "^2.0.0",
@@ -24,6 +33,7 @@
   "devDependencies": {
     "@types/axios": "^0.14.0",
     "@types/eventsource": "^1.1.11",
+    "@types/node": "^20.3.1",
     "@types/ws": "^8.5.4"
   }
 }
